@@ -1,7 +1,7 @@
 # Editorial Quality Desk Skills
 
 <p align="center">
-  <strong>A modular editorial-quality control desk for AI-assisted writing and editing.</strong>
+  <strong>A modular quality-control system for AI-assisted writing and editing.</strong>
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 **Editorial Quality Desk Skills v1.0**
 
-The current release establishes the controller architecture and the first baseline module:
+The current version establishes the complete controller architecture and includes the first baseline module:
 
 **Editorial Quality Control Spec v1.0**
 
@@ -31,49 +31,51 @@ The current release establishes the controller architecture and the first baseli
 
 ## What this project is
 
-Editorial Quality Desk Skills is a modular skill system for AI-assisted editorial work.
+Editorial Quality Desk Skills is a modular Skill system for AI-assisted writing and editing.
 
-It separates **orchestration** from **editorial rules**:
+**The skill is built on a cross-language editorial framework, but this project currently implements it with Chinese writing optimization as the primary target.**
 
-- `SKILL.md` acts as the desk controller.
-- `references/spec-dsl.md` contains the machine-oriented execution rules.
-- `references/spec-human.md` is the human-readable specification.
-- `references/examples.md` stores curated positive and negative examples.
-- `references/regression-cases.md` stores known failure patterns so corrected problems do not return.
+The skill separates **controller orchestration** from **actual editorial rules**:
 
-The controller is intentionally kept separate from the detailed writing guidance. Future writing subskills can be added as independent modules and routed by `SKILL.md` only when relevant.
+- `SKILL.md`: controller, activation, routing, module loading, priority, conflict handling, and acceptance.
+- `references/spec-dsl.md`: the AI-executable Editorial Quality Control v1.0 DSL.
+- `references/spec-human.md`: the complete human-readable specification.
+- `references/examples.md`: positive and negative example library.
+- `references/regression-cases.md`: known failure cases and regression-prevention rules.
+
+`SKILL.md` is intentionally kept lean instead of becoming a container for every writing rule. Future writing subskills can be added as independent modules, with the controller deciding whether they should be loaded for a given task.
 
 ---
 
 ## Design principles
 
-### Controller, not monolith
+### The controller is not the rulebook
 
 `SKILL.md` handles:
 
-- activation
-- routing
+- activation timing
+- task routing
 - module loading
 - execution order
 - priority
 - conflict handling
-- validation
+- acceptance
 - stopping conditions
 
-It should **not** become a second copy of the editorial rules.
+The actual editorial and writing rules live in independent modules.
 
-### Progressive disclosure
+### Progressive loading
 
-The desk loads only the modules needed for the current task instead of forcing every rule into context every time.
+Load only the rules required by the current task instead of forcing every module into context every time.
 
-### Preserve before polishing
+### Preserve first, polish second
 
-The current baseline prioritizes:
+The current baseline module uses this priority order:
 
 1. factual integrity
-2. semantic fidelity
+2. preservation of original meaning
 3. logical integrity
-4. uncertainty, degree, and emphasis
+4. preservation of uncertainty, degree, and emphasis
 5. author voice
 6. clarity and specificity
 7. structure and information density
@@ -81,34 +83,34 @@ The current baseline prioritizes:
 
 ### Minimum intervention
 
-A sentence is not rewritten merely because another wording is possible.
+The existence of another possible wording is not, by itself, a reason to rewrite a sentence.
 
-The system should edit only when the change produces a material improvement.
+Edit only when there is a material improvement.
 
 ---
 
-## Current module — Editorial Quality Control v1.0
+## Current module: Editorial Quality Control v1.0
 
-The first module focuses on:
+Includes:
 
-- semantic and factual preservation
+- preservation of meaning and facts
 - logical integrity
 - preservation of uncertainty and emphasis
 - minimum intervention
 - clarity and specificity
 - information density
 - paragraph structure
-- sentence-length control
+- long-sentence control
 - natural sentence rhythm
-- contrast and transition logic
-- prevention of false 「不是 A，而是 B」 oppositions
+- contrast and transition control
+- prevention of invented “not A, but B” oppositions
 - heading and subheading quality
-- avoidance of overly literary or vague headings
-- anti-AI-style checks
-- removal of pseudo-depth and empty abstraction
+- avoidance of overly literary headings
+- AI-style detection
+- avoidance of pseudo-depth and empty abstraction
 - author-voice preservation
 - local side-effect checks
-- global recursive review
+- full-text recursive review
 - rollback when an edit damages a higher-priority dimension
 
 ---
@@ -133,15 +135,13 @@ Editorial-Quality-Desk-Skills/
 
 # Installation
 
-The repository is designed as a filesystem-based Agent Skill.
+This project uses a filesystem-based Agent Skill structure.
 
-The examples below install the whole repository as one skill directory, so `SKILL.md` can continue to resolve its `references/` files without path changes.
+GitHub code blocks include a native one-click copy button in the upper-right corner.
 
-## Codex — project-level installation
+## Codex: project-level installation
 
-OpenAI documents repo-local skills under `.agents/skills/`.
-
-From the root of your project:
+Run from your project root:
 
 ```bash
 mkdir -p .agents/skills
@@ -165,15 +165,11 @@ your-project/
 git -C .agents/skills/editorial-quality-desk pull --ff-only
 ```
 
-> If your project already uses Git and you do not want a nested Git repository, install this repository as a submodule or copy the files into the same target directory instead.
-
 ---
 
-## Claude Code — project-level installation
+## Claude Code: project-level installation
 
-Claude Code discovers project skills under `.claude/skills/<skill-name>/`.
-
-From the root of your project:
+Run from your project root:
 
 ```bash
 mkdir -p .claude/skills
@@ -199,9 +195,9 @@ git -C .claude/skills/editorial-quality-desk pull --ff-only
 
 ---
 
-## Claude Code — personal installation
+## Claude Code: personal installation
 
-For a personal skill available across projects:
+To make the Skill available across projects:
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -218,31 +214,30 @@ git -C ~/.claude/skills/editorial-quality-desk pull --ff-only
 
 ## Manual installation
 
-You can also download the repository and place the complete folder in the appropriate skill directory.
+You can also download the entire repository and place it in the appropriate Skill directory.
 
 **Repository:**  
 [joyce5438/Editorial-Quality-Desk-Skills](https://github.com/joyce5438/Editorial-Quality-Desk-Skills)
 
-Keep `SKILL.md` and `references/` together.
+Keep `SKILL.md` and `references/` in the same Skill directory.
 
 ---
 
 # Usage
 
-The desk is designed to activate for substantive editorial tasks such as:
+Suitable for tasks such as:
 
-- editing
+- article editing
 - rewriting
 - proofreading
-- restructuring
-- polishing
-- removing AI-like phrasing
-- improving headings
+- paragraph restructuring
+- reducing AI-like phrasing
+- improving headings and subheadings
 - controlling long sentences
-- reviewing contrast and transition logic
+- checking contrast and transition logic
 - preserving author voice while improving readability
 
-You can also explicitly request it:
+You can also invoke it explicitly:
 
 ```text
 Use the Editorial Quality Desk skill to edit this article.
@@ -254,15 +249,11 @@ Or:
 Review this draft with Editorial Quality Control v1.0.
 ```
 
-The controller decides which registered modules should be loaded.
-
 ---
 
-## Why the DSL exists
+## Why there is a DSL
 
-`references/spec-dsl.md` is not intended as decorative pseudo-code.
-
-It expresses editorial behavior in an operational form:
+`references/spec-dsl.md` is not decorative pseudo-code. It describes editorial behavior in an operational form:
 
 ```text
 OBJECTIVE
@@ -275,59 +266,20 @@ OBJECTIVE
 → STOP WHEN ONLY OPTIONAL STYLE ALTERNATIVES REMAIN
 ```
 
-This structure is designed to reduce a common failure mode in AI editing: fixing one sentence while damaging meaning, logic, voice, or surrounding context.
+Its main purpose is to reduce a common AI editing failure: a local sentence appears improved while meaning, logic, voice, or surrounding context is damaged.
 
 ---
 
-## Human-readable specification
+## Documents
 
-For editors, writers, maintainers, or anyone reviewing the rules directly:
-
-[Read `references/spec-human.md`](./references/spec-human.md)
-
-For AI execution:
-
-[Read `references/spec-dsl.md`](./references/spec-dsl.md)
-
-For examples:
-
-[Read `references/examples.md`](./references/examples.md)
-
-For known failure patterns:
-
-[Read `references/regression-cases.md`](./references/regression-cases.md)
+- [Human-readable specification `spec-human.md`](./references/spec-human.md)
+- [AI execution DSL `spec-dsl.md`](./references/spec-dsl.md)
+- [Example library `examples.md`](./references/examples.md)
+- [Regression cases `regression-cases.md`](./references/regression-cases.md)
 
 ---
 
-## Regression-driven improvement
-
-When a recurring editing failure is discovered, it can be added to `regression-cases.md`.
-
-A regression case records:
-
-- the trigger
-- the bad pattern
-- why it fails
-- the required behavior
-- a preferred example
-- related rules
-
-This allows the desk to become more reliable over time without turning `SKILL.md` into an oversized instruction file.
-
----
-
-## Extending the desk
-
-Future modules can be added without redesigning the controller.
-
-Example:
-
-```text
-MODULE: food-writing
-PATH: references/food-writing.md
-ACTIVATE_WHEN: food, restaurant, tasting, beverage, or culinary editorial work
-DEPENDS_ON: editorial-quality-control
-```
+## Extensible architecture
 
 Possible future modules include:
 
@@ -336,23 +288,21 @@ Possible future modules include:
 - investment writing
 - headline editing
 - long-form narrative structure
-- fact/claim separation
+- fact/opinion separation
 - publication-specific style modules
 
-The controller should load only the modules relevant to the task.
+`SKILL.md` decides which modules should be loaded for each task.
 
 ---
 
 ## Compatibility
 
-This repository follows the common `SKILL.md` + supporting-files model used by modern Agent Skills.
-
-It is currently structured for:
+Current design targets:
 
 - OpenAI Codex / Agent Skills
 - Claude Code custom Skills
 
-Because both systems can load a `SKILL.md` and supporting files from a skill directory, the core editorial modules are kept provider-neutral wherever practical.
+Core rules are kept as provider-neutral as practical so the project is not tied to a single model or platform.
 
 ---
 
@@ -360,13 +310,13 @@ Because both systems can load a `SKILL.md` and supporting files from a skill dir
 
 **v1.0**
 
-The architecture and baseline Editorial Quality Control module are usable now.
+The controller architecture and baseline Editorial Quality Control module are ready to use.
 
-`examples.md` and `regression-cases.md` are intentionally designed to grow from real editing cases rather than being filled with artificial examples in advance.
+`examples.md` and `regression-cases.md` are intended to grow from real editorial cases instead of being pre-filled with artificial examples.
 
 ---
 
-## Core principle
+## Core principles
 
 > **Good editing should make the writing clearer, not make the editor more visible.**
 
