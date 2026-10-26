@@ -85,3 +85,47 @@ The better heading states the actual observation instead of compressing the sect
 - heading specificity
 - complete-sentence subheadings are allowed
 - content before style
+
+---
+
+## Example: Remove false contrast, keep grounded sensory language
+
+### Context
+
+Food writing. The original AI draft describes the mayonnaise salad and pickled radish served with fried chicken gizzards.
+
+### AI draft
+
+> 桌邊還會出現舊式炸雞店常見的美乃滋沙拉（케요네즈 사라다）與醃蘿蔔。它們不是陪襯：雞胗連吃幾口後，用冰涼脆口的蘿蔔換一口，下一塊才會重新聽見炸衣的聲音。
+
+### Human revision
+
+> 桌邊還會出現舊式炸雞店常見的美乃滋沙拉（케요네즈 사라다）與醃蘿蔔。雞胗連吃幾口後，用冰涼脆口的蘿蔔換一口味，下一塊重新聽見嘴裡酥脆炸衣的聲音。
+
+### What changed
+
+1. 「它們不是陪襯」 was removed because it creates a false opposition. The text had not established that the salad and radish were merely decorative or secondary.
+2. The sensory sentence was retained and made more specific. 「嘴裡酥脆炸衣的聲音」 has concrete sensory grounding and directly describes the eating experience.
+3. The revision did not remove figurative or vivid language merely because it was expressive.
+
+### Why the human revision is better
+
+The weak part of the AI draft is not the sensory phrasing itself. The problem is the invented rhetorical setup before it.
+
+This distinction matters:
+
+- unsupported rhetorical framing should be removed;
+- grounded sensory language can remain when it is clear, specific, and relevant.
+
+The goal is not to make prose flat. The goal is to remove artificial editorial framing while preserving useful human texture.
+
+### Rules demonstrated
+
+- contrast logic
+- no false opposition
+- specificity
+- minimum intervention
+- author voice preservation
+- AI voice control
+- preserve grounded sensory language
+
