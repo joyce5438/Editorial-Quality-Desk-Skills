@@ -129,3 +129,41 @@ Prefer content, observation, or conclusion over atmosphere and metaphor.
 - heading specificity
 - empty abstraction
 - AI voice
+
+---
+
+## REG-004 — Unprompted metaphorical reframing
+
+### Trigger
+
+A clear literal category, relation, function, role, or hierarchy term is rewritten as a more literary or narrative metaphor even though the source text did not establish that metaphorical frame.
+
+### Bad pattern
+
+> 這裡另一條主線是慶尚道風格的蔬菜燉雞（야채찜닭）。
+
+### Why it fails
+
+「特色菜」 is a clear category label. Replacing it with 「主線」 introduces a narrative metaphor that the source text did not establish.
+
+The problem is not merely that 「主線」 sounds more literary. It changes the semantic function of the wording from classification to narrative framing, making the sentence less direct and more AI-like.
+
+### Required behavior
+
+When the source uses an explicit category, relation, function, role, or hierarchy term:
+
+1. preserve its semantic function;
+2. do not replace it with a metaphor merely to make the prose sound more polished;
+3. allow metaphorical wording only when the source or surrounding context already establishes the same metaphorical system.
+
+### Preferred example
+
+> 這裡另一個特色菜是慶尚道風格的蔬菜燉雞（야채찜닭）。
+
+### Related rules
+
+- semantic fidelity
+- specificity
+- minimum intervention
+- AI voice
+- no unprompted metaphorical reframing
