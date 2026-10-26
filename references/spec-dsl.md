@@ -67,6 +67,7 @@ stylistic_polish
 ::QUALITY_CHECK{formulaic_structure|standard:minimal}
 ::QUALITY_CHECK{pseudo_depth|standard:none}
 ::QUALITY_CHECK{empty_abstraction|standard:minimal}
+::QUALITY_CHECK{metaphorical_reframing|standard:no_unprompted_reframing}
 ::QUALITY_CHECK{forced_triplets|standard:none}
 ::QUALITY_CHECK{empty_adjectives|standard:minimal}
 ::QUALITY_CHECK{author_voice|standard:preserve}
@@ -234,6 +235,47 @@ abstract word has no concrete support
 [IF]
 abstract word accurately summarizes already-established detail
 => [KEEP]
+```
+
+---
+
+```text
+::RULE{no_unprompted_metaphorical_reframing}
+
+[IF]
+source uses an explicit category, relation, function, role, hierarchy,
+or other literal label
+=> [PRESERVE_SEMANTIC_FUNCTION]
+
+[NEVER]
+replace a clear literal term with a metaphorical, narrative,
+or abstract label merely for style
+
+[RISKY_SUBSTITUTIONS]
+特色菜 -> 主線
+配菜 -> 配角
+原因 -> 線索
+功能 -> 角色
+段落 -> 篇章
+步驟 -> 路徑
+分類 -> 拼圖
+重點 -> 舞台中央
+
+[ALLOW]
+only if the source text or surrounding context
+already establishes the same metaphorical frame
+
+[TEST]
+"Did the author establish this metaphor,
+or did the editor invent it?"
+
+[IF]
+editor invented it
+=> [RESTORE_LITERAL_TERM]
+
+[PRINCIPLE]
+clear literal classification >
+editor-invented metaphor
 ```
 
 ---
@@ -898,6 +940,7 @@ author_voice
 [ ] headings are not excessively poetic
 [ ] headings are specific to this text
 [ ] abstract adjectives have concrete support
+[ ] explicit categories, relations, and functions were not reframed into invented metaphors
 [ ] each paragraph has a clear primary function
 [ ] no unnecessary semantic repetition
 [ ] author voice remains recognizable
