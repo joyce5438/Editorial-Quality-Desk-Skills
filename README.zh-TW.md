@@ -33,9 +33,9 @@
 
 Editorial Quality Desk Skills 是一套供 AI 協助寫作與編輯使用的模組化 Skill 系統。
 
-**跨語言編輯框架，中文寫作最佳化實作。**
+**技能為跨語言編輯框架，但目前本專案我僅以中文寫作最佳化為目標實作。**
 
-它把「主控調度」與「實際寫作規則」拆開：
+本技能把「主控調度」與「實際編寫規則」拆開：
 
 - `SKILL.md`：主控、啟動、路由、模組載入、優先級、衝突處理與驗收。
 - `references/spec-dsl.md`：給 AI 執行的 Editorial Quality Control v1.0 DSL。
@@ -62,7 +62,7 @@ Editorial Quality Desk Skills 是一套供 AI 協助寫作與編輯使用的模�
 - 驗收
 - 停止條件
 
-真正的寫作規則放在獨立模組中。
+真正的編輯寫作規則放在獨立模組中。
 
 ### 漸進載入
 
