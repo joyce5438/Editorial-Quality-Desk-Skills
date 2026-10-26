@@ -1,7 +1,7 @@
 # Editorial Quality Desk Skills
 
 <p align="center">
-  <strong>AI 기반 글쓰기와 편집을 위한 모듈형 편집 품질 관리 시스템.</strong>
+  <strong>AI 기반 글쓰기와 편집을 위한 모듈형 품질 관리 시스템.</strong>
 </p>
 
 <p align="center">
@@ -23,61 +23,63 @@
 
 **Editorial Quality Desk Skills v1.0**
 
-현재 버전은 컨트롤러 구조와 첫 번째 기본 모듈을 제공합니다.
+현재 버전은 완전한 컨트롤러 구조를 구축하고 첫 번째 기본 모듈을 포함합니다.
 
 **Editorial Quality Control Spec v1.0**
 
 ---
 
-## 프로젝트 개요
+## 이 프로젝트는 무엇인가
 
 Editorial Quality Desk Skills는 AI 보조 글쓰기와 편집을 위한 모듈형 Skill 시스템입니다.
 
-오케스트레이션과 실제 편집 규칙을 분리합니다.
+**이 Skill은 다국어 편집 프레임워크를 기반으로 하지만, 현재 이 프로젝트는 중국어 글쓰기 최적화를 주요 구현 목표로 합니다.**
 
-- `SKILL.md` — 활성화, 라우팅, 모듈 로딩, 우선순위, 충돌 처리, 검수 흐름
-- `references/spec-dsl.md` — AI 실행용 DSL
-- `references/spec-human.md` — 사람이 읽을 수 있는 전체 규칙
-- `references/examples.md` — 좋은/나쁜 예시 라이브러리
-- `references/regression-cases.md` — 이미 수정한 실패 패턴의 재발 방지 사례
+이 Skill은 **컨트롤러 오케스트레이션**과 **실제 편집 규칙**을 분리합니다.
 
-`SKILL.md`는 의도적으로 가볍게 유지합니다. 세부 글쓰기 규칙은 별도 모듈에 두고, 컨트롤러가 필요한 경우에만 불러옵니다.
+- `SKILL.md`: 컨트롤러, 활성화, 라우팅, 모듈 로딩, 우선순위, 충돌 처리, 검수.
+- `references/spec-dsl.md`: AI 실행용 Editorial Quality Control v1.0 DSL.
+- `references/spec-human.md`: 사람이 직접 읽을 수 있는 전체 규칙.
+- `references/examples.md`: 좋은/나쁜 예시 라이브러리.
+- `references/regression-cases.md`: 알려진 실패 사례와 회귀 방지 규칙.
+
+`SKILL.md`는 의도적으로 간결하게 유지하며 모든 글쓰기 규칙을 주 파일에 넣지 않습니다. 향후 다른 글쓰기 하위 Skill을 추가할 때는 독립 모듈을 추가하고, 컨트롤러가 작업에 따라 로드 여부를 결정합니다.
 
 ---
 
 ## 설계 원칙
 
-### 컨트롤러와 규칙 분리
+### 컨트롤러는 규칙 모음집이 아니다
 
 `SKILL.md`는 다음을 담당합니다.
 
-- 활성화 조건
+- 언제 활성화할지
 - 작업 라우팅
-- 모듈 선택
+- 모듈 로딩
 - 실행 순서
 - 우선순위
 - 충돌 처리
 - 검수
 - 종료 조건
 
-세부 편집 규칙은 별도 모듈에서 관리합니다.
+실제 편집 및 글쓰기 규칙은 독립 모듈에 둡니다.
 
 ### 점진적 로딩
 
-현재 작업에 필요한 모듈만 로드합니다.
+현재 작업에 필요한 규칙만 로드하고, 모든 모듈을 매번 컨텍스트에 넣지 않습니다.
 
-### 보존이 먼저, 문체 다듬기는 나중
+### 먼저 보존하고, 그다음 다듬기
 
-현재 기본 우선순위:
+현재 기본 모듈의 우선순위는 다음과 같습니다.
 
 1. 사실 보존
-2. 의미 보존
+2. 원래 의미 보존
 3. 논리 보존
 4. 불확실성, 정도, 강조 보존
 5. 저자 목소리
-6. 명료성 및 구체성
-7. 구조 및 정보 밀도
-8. 스타일 다듬기
+6. 명료성과 구체성
+7. 구조와 정보 밀도
+8. 문체 다듬기
 
 ### 최소 개입
 
@@ -87,11 +89,11 @@ Editorial Quality Desk Skills는 AI 보조 글쓰기와 편집을 위한 모듈�
 
 ---
 
-## 현재 모듈 — Editorial Quality Control v1.0
+## 현재 모듈: Editorial Quality Control v1.0
 
-주요 기능:
+포함 항목:
 
-- 의미 및 사실 보존
+- 원래 의미와 사실 보존
 - 논리 무결성
 - 불확실성과 강조 보존
 - 최소 개입
@@ -100,20 +102,20 @@ Editorial Quality Desk Skills는 AI 보조 글쓰기와 편집을 위한 모듈�
 - 문단 구조
 - 긴 문장 제어
 - 자연스러운 문장 리듬
-- 대조와 전환 표현 제어
-- 인위적인 「A가 아니라 B」 대립 방지
+- 대조와 전환 표현
+- 인위적인 “A가 아니라 B” 대립 방지
 - 제목과 소제목 품질
-- 지나치게 문학적이거나 추상적인 제목 방지
-- AI 특유의 문체 점검
-- 가짜 깊이와 빈 추상어 제거
+- 지나치게 문학적인 제목 방지
+- AI스러운 문체 점검
+- 가짜 깊이와 공허한 추상 표현 방지
 - 저자 목소리 보존
-- 지역적 부작용 점검
-- 전체 문서 재검토
-- 상위 우선순위를 손상시키는 수정 롤백
+- 국소적 부작용 점검
+- 전체 문서 재귀 검토
+- 수정이 더 높은 우선순위를 손상시킬 경우 롤백
 
 ---
 
-## 저장소 구조
+## 프로젝트 구조
 
 ```text
 Editorial-Quality-Desk-Skills/
@@ -133,18 +135,31 @@ Editorial-Quality-Desk-Skills/
 
 # 설치
 
-GitHub의 코드 블록에는 기본 복사 버튼이 제공되므로 아래 명령을 한 번에 복사할 수 있습니다.
+이 프로젝트는 파일 시스템 기반 Agent Skill 구조를 사용합니다.
 
-## Codex — 프로젝트 설치
+GitHub 코드 블록 오른쪽 위에는 기본 한 번 클릭 복사 버튼이 제공됩니다.
 
-프로젝트 루트에서:
+## Codex: 프로젝트 단위 설치
+
+프로젝트 루트에서 실행:
 
 ```bash
 mkdir -p .agents/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .agents/skills/editorial-quality-desk
 ```
 
-업데이트:
+설치 후:
+
+```text
+your-project/
+└─ .agents/
+   └─ skills/
+      └─ editorial-quality-desk/
+         ├─ SKILL.md
+         └─ references/
+```
+
+### 업데이트
 
 ```bash
 git -C .agents/skills/editorial-quality-desk pull --ff-only
@@ -152,16 +167,27 @@ git -C .agents/skills/editorial-quality-desk pull --ff-only
 
 ---
 
-## Claude Code — 프로젝트 설치
+## Claude Code: 프로젝트 단위 설치
 
-프로젝트 루트에서:
+프로젝트 루트에서 실행:
 
 ```bash
 mkdir -p .claude/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .claude/skills/editorial-quality-desk
 ```
 
-업데이트:
+설치 후:
+
+```text
+your-project/
+└─ .claude/
+   └─ skills/
+      └─ editorial-quality-desk/
+         ├─ SKILL.md
+         └─ references/
+```
+
+### 업데이트
 
 ```bash
 git -C .claude/skills/editorial-quality-desk pull --ff-only
@@ -169,16 +195,16 @@ git -C .claude/skills/editorial-quality-desk pull --ff-only
 
 ---
 
-## Claude Code — 개인 설치
+## Claude Code: 개인 단위 설치
 
-모든 프로젝트에서 사용할 개인 Skill:
+여러 프로젝트에서 사용할 수 있도록 설치:
 
 ```bash
 mkdir -p ~/.claude/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git ~/.claude/skills/editorial-quality-desk
 ```
 
-업데이트:
+### 업데이트
 
 ```bash
 git -C ~/.claude/skills/editorial-quality-desk pull --ff-only
@@ -188,28 +214,28 @@ git -C ~/.claude/skills/editorial-quality-desk pull --ff-only
 
 ## 수동 설치
 
-저장소 전체를 내려받아 적절한 Skill 디렉터리에 넣어도 됩니다.
+저장소 전체를 내려받아 해당 Skill 디렉터리에 넣어도 됩니다.
 
-**Repository:**  
+**프로젝트 링크:**  
 [joyce5438/Editorial-Quality-Desk-Skills](https://github.com/joyce5438/Editorial-Quality-Desk-Skills)
 
 `SKILL.md`와 `references/`는 같은 Skill 디렉터리 안에 유지해야 합니다.
 
 ---
 
-# 사용
+# 사용 방법
 
-다음과 같은 작업에 적합합니다.
+다음 작업에 적합합니다.
 
-- 문서 편집
+- 글 편집
 - 리라이팅
 - 교정
 - 문단 재구성
-- AI스러운 표현 제거
-- 제목/소제목 개선
+- AI스러운 표현 줄이기
+- 제목과 소제목 개선
 - 긴 문장 제어
-- 대조 및 전환 논리 검토
-- 저자 목소리를 유지하면서 가독성 개선
+- 대조와 전환 표현 점검
+- 가독성을 높이면서 저자 목소리 보존
 
 명시적으로 호출할 수도 있습니다.
 
@@ -225,9 +251,9 @@ Review this draft with Editorial Quality Control v1.0.
 
 ---
 
-## DSL을 사용하는 이유
+## 왜 DSL이 있는가
 
-`references/spec-dsl.md`은 장식용 의사 코드가 아니라 실제 편집 행동을 운영 가능한 구조로 표현합니다.
+`references/spec-dsl.md`은 장식용 의사 코드가 아니라 편집 행동을 운영 가능한 형식으로 표현합니다.
 
 ```text
 OBJECTIVE
@@ -240,43 +266,43 @@ OBJECTIVE
 → STOP WHEN ONLY OPTIONAL STYLE ALTERNATIVES REMAIN
 ```
 
-목표는 한 문장을 개선하면서 의미, 논리, 저자 목소리, 주변 문맥을 손상시키는 AI 편집 실패를 줄이는 것입니다.
+주된 목적은 AI 편집에서 흔한 문제를 줄이는 것입니다. 한 문장이 더 좋아 보이더라도 원래 의미, 논리, 저자 목소리, 주변 문맥이 손상되는 상황을 방지합니다.
 
 ---
 
 ## 문서
 
-- [사람용 규칙 `spec-human.md`](./references/spec-human.md)
+- [사람이 읽는 규칙 `spec-human.md`](./references/spec-human.md)
 - [AI 실행 DSL `spec-dsl.md`](./references/spec-dsl.md)
-- [예시 `examples.md`](./references/examples.md)
+- [예시 라이브러리 `examples.md`](./references/examples.md)
 - [회귀 사례 `regression-cases.md`](./references/regression-cases.md)
 
 ---
 
-## 확장 가능 구조
+## 확장 가능한 구조
 
 향후 다음과 같은 모듈을 추가할 수 있습니다.
 
-- 음식 및 음료 글쓰기
+- 음식 및 차·음료 글쓰기
 - 여행 글쓰기
 - 투자 글쓰기
-- 헤드라인 편집
-- 장문 내러티브 구조
-- 사실/의견 분리
-- 매체별 스타일 모듈
+- 제목 편집
+- 장문 서사 구조
+- 사실／의견 분리
+- 특정 매체 스타일 모듈
 
-`SKILL.md`가 작업에 따라 필요한 모듈만 선택합니다.
+`SKILL.md`가 작업에 따라 어떤 모듈을 로드할지 결정합니다.
 
 ---
 
 ## 호환성
 
-현재 목표 플랫폼:
+현재 설계 대상:
 
 - OpenAI Codex / Agent Skills
 - Claude Code custom Skills
 
-핵심 편집 규칙은 가능한 한 특정 공급자에 종속되지 않도록 설계합니다.
+핵심 규칙은 가능한 한 provider-neutral하게 유지하여 특정 모델이나 플랫폼에 종속되지 않도록 합니다.
 
 ---
 
@@ -284,17 +310,17 @@ OBJECTIVE
 
 **v1.0**
 
-컨트롤러 구조와 기본 Editorial Quality Control 모듈을 사용할 수 있습니다.
+컨트롤러 구조와 Editorial Quality Control 기본 모듈은 현재 사용할 수 있습니다.
 
-`examples.md`와 `regression-cases.md`는 인위적으로 채우기보다 실제 편집 사례를 통해 확장하는 것을 원칙으로 합니다.
+`examples.md`와 `regression-cases.md`는 인위적인 예시로 미리 채우기보다 실제 편집 사례를 통해 계속 축적하는 것을 원칙으로 합니다.
 
 ---
 
 ## 핵심 원칙
 
-> **좋은 편집은 편집자의 기술을 드러내는 것이 아니라 글을 더 명확하게 만들어야 합니다.**
+> **좋은 편집은 편집자가 얼마나 잘 쓰는지를 보여주는 것이 아니라, 글을 더 명확하게 만들어야 합니다.**
 
-> **다시 쓸 수 있다는 것이 다시 써야 한다는 뜻은 아닙니다.**
+> **다시 쓸 수 있다고 해서 반드시 다시 써야 하는 것은 아닙니다.**
 
 ---
 
