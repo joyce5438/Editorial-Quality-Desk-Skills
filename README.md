@@ -371,3 +371,10 @@ The architecture and baseline Editorial Quality Control module are usable now.
 > **Good editing should make the writing clearer, not make the editor more visible.**
 
 > **Can be rewritten ≠ should be rewritten.**
+
+---
+
+## Author
+
+**Austin**  
+https://x.com/austinsayhi
