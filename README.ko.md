@@ -144,17 +144,16 @@ Editorial-Quality-Desk-Skills/
 
 ## Codex
 
-프로젝트 루트에서 실행합니다:
+이 저장소를 Codex Plugin Marketplace로 추가합니다:
 
 ```bash
-mkdir -p .agents/skills
-git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .agents/skills/editorial-quality-desk
+codex plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
 ```
 
 ### 업데이트
 
 ```bash
-git -C .agents/skills/editorial-quality-desk pull --ff-only
+codex plugin marketplace upgrade editorial-quality-desk
 ```
 
 ## Claude Code
