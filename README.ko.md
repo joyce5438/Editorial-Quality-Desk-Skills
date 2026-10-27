@@ -135,28 +135,20 @@ Editorial-Quality-Desk-Skills/
 
 # 설치
 
-이 프로젝트는 파일 시스템 기반 Agent Skill 구조를 사용합니다.
+사용 중인 AI 도구를 선택하세요. Editorial Quality Desk는 **Codex**를 주요 지원 환경으로 하며 **Claude Code**와도 호환됩니다.
 
-GitHub 코드 블록 오른쪽 위에는 기본 한 번 클릭 복사 버튼이 제공됩니다.
+> **모델 권장 사항**
+>
+> GPT-5.6 Terra High만으로도 이 Skill을 충분히 잘 실행할 수 있으며, 반드시 GPT-6.1을 사용할 필요는 없습니다.  
+> 글쓰기와 편집에서는 추론 능력이 높다고 항상 더 좋은 문장이 나오는 것은 아닙니다. 중간급 모델이 어조, 리듬, 자연스러운 표현에 더 잘 맞는 경우도 있습니다.
 
-## Codex: 프로젝트 단위 설치
+## Codex
 
-프로젝트 루트에서 실행:
+프로젝트 루트에서 실행합니다:
 
 ```bash
 mkdir -p .agents/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .agents/skills/editorial-quality-desk
-```
-
-설치 후:
-
-```text
-your-project/
-└─ .agents/
-   └─ skills/
-      └─ editorial-quality-desk/
-         ├─ SKILL.md
-         └─ references/
 ```
 
 ### 업데이트
@@ -165,26 +157,13 @@ your-project/
 git -C .agents/skills/editorial-quality-desk pull --ff-only
 ```
 
----
+## Claude Code
 
-## Claude Code: 프로젝트 단위 설치
-
-프로젝트 루트에서 실행:
+프로젝트 루트에서 실행합니다:
 
 ```bash
 mkdir -p .claude/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .claude/skills/editorial-quality-desk
-```
-
-설치 후:
-
-```text
-your-project/
-└─ .claude/
-   └─ skills/
-      └─ editorial-quality-desk/
-         ├─ SKILL.md
-         └─ references/
 ```
 
 ### 업데이트
@@ -193,33 +172,7 @@ your-project/
 git -C .claude/skills/editorial-quality-desk pull --ff-only
 ```
 
----
-
-## Claude Code: 개인 단위 설치
-
-여러 프로젝트에서 사용할 수 있도록 설치:
-
-```bash
-mkdir -p ~/.claude/skills
-git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git ~/.claude/skills/editorial-quality-desk
-```
-
-### 업데이트
-
-```bash
-git -C ~/.claude/skills/editorial-quality-desk pull --ff-only
-```
-
----
-
-## 수동 설치
-
-저장소 전체를 내려받아 해당 Skill 디렉터리에 넣어도 됩니다.
-
-**프로젝트 링크:**  
-[joyce5438/Editorial-Quality-Desk-Skills](https://github.com/joyce5438/Editorial-Quality-Desk-Skills)
-
-`SKILL.md`와 `references/`는 같은 Skill 디렉터리 안에 유지해야 합니다.
+설치 또는 업데이트 후에는 새 세션을 시작하세요.
 
 ---
 
