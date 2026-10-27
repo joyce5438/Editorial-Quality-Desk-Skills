@@ -144,15 +144,15 @@ Choose the AI tool you use. Editorial Quality Desk primarily targets **Codex** a
 
 ## Codex
 
-Add this repository as a Codex plugin marketplace:
+Paste the following instruction into a Codex conversation:
 
-```bash
-codex plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
+```text
+codex plugin marketplace add and install joyce5438/Editorial-Quality-Desk-Skills
 ```
 
 ### Update
 
-```bash
+```text
 codex plugin marketplace upgrade editorial-quality-desk
 ```
 
@@ -247,36 +247,4 @@ Possible future modules include:
 
 ---
 
-## Compatibility
-
-Current design targets:
-
-- OpenAI Codex / Agent Skills
-- Claude Code custom Skills
-
-Core rules are kept as provider-neutral as practical so the project is not tied to a single model or platform.
-
----
-
-## Status
-
-**v1.0**
-
-The controller architecture and baseline Editorial Quality Control module are ready to use.
-
-`examples.md` and `regression-cases.md` are intended to grow from real editorial cases instead of being pre-filled with artificial examples.
-
----
-
-## Core principles
-
-> **Good editing should make the writing clearer, not make the editor more visible.**
-
-> **Can be rewritten ≠ should be rewritten.**
-
----
-
-## Author
-
-**Austin**  
-https://x.com/austinsayhi
+#
