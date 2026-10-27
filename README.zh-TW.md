@@ -159,30 +159,20 @@ codex plugin marketplace upgrade editorial-quality-desk
 
 # 使用方式
 
-適合下列任務：
-
-- 編輯文章
-- 改寫
-- 校稿
-- 重整段落
-- 降低 AI 味
-- 改善標題與小標題
-- 控制長句
-- 檢查對比與轉換詞
-- 在改善可讀性的同時保留作者聲音
-
-也可以明確指定：
+標準呼叫：
 
 ```text
-Use the Editorial Quality Desk skill to edit this article.
+Use Editorial Quality Desk.
 ```
 
-或：
+自然語言簡語：
 
 ```text
-Review this draft with Editorial Quality Control v1.0.
+呼叫編輯。
 ```
 
----
+也可以直接接上任務：
 
-#
+```text
+呼叫編輯，檢查這篇文章。
+```
