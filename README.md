@@ -23,7 +23,7 @@
 
 **Editorial Quality Desk Skills v1.0**
 
-The current version establishes the complete controller architecture and includes the first foundational module:
+The current version establishes the complete controller architecture and includes one primary skill module:
 
 **Editorial Quality Control Spec v1.0**
 
@@ -33,7 +33,7 @@ The current version establishes the complete controller architecture and include
 
 Editorial Quality Desk Skills is a modular Skill system for AI-assisted writing and editing.
 
-**The skill is a cross-language editorial framework, but this project is currently implemented with Chinese writing optimization as its sole target.**
+**The skill is a cross-language editorial framework; this project is currently implemented with Chinese writing optimization as its target.**
 
 The skill separates the “controller and routing” layer from the “actual writing and editing rules”:
 
@@ -169,7 +169,7 @@ Suitable for tasks such as:
 - improving headings and subheadings
 - controlling long sentences
 - checking contrast and transitions
-- preserving author voice while improving readability
+- improving readability while preserving the author's tone
 
 Standard invocation:
 
@@ -186,7 +186,7 @@ Call editor.
 You can also append the task directly:
 
 ```text
-Call editor. Review this article.
+Call editor. Review the article.
 ```
 
 ---
