@@ -177,74 +177,20 @@ After installing or updating, start a new session.
 
 # Usage
 
-Suitable for tasks such as:
-
-- article editing
-- rewriting
-- proofreading
-- paragraph restructuring
-- reducing AI-like phrasing
-- improving headings and subheadings
-- controlling long sentences
-- checking contrast and transition logic
-- preserving author voice while improving readability
-
-You can also invoke it explicitly:
+Standard invocation:
 
 ```text
-Use the Editorial Quality Desk skill to edit this article.
+Use Editorial Quality Desk.
 ```
 
-Or:
+Short natural-language invocation:
 
 ```text
-Review this draft with Editorial Quality Control v1.0.
+Call editor.
 ```
 
----
-
-## Why there is a DSL
-
-`references/spec-dsl.md` is not decorative pseudo-code. It describes editorial behavior in an operational form:
+You can also append the task directly:
 
 ```text
-OBJECTIVE
-→ HARD CONSTRAINTS
-→ QUALITY CHECKS
-→ PATCH
-→ LOCAL RECHECK
-→ GLOBAL RECHECK
-→ ROLLBACK IF NEEDED
-→ STOP WHEN ONLY OPTIONAL STYLE ALTERNATIVES REMAIN
+Call editor. Review this draft.
 ```
-
-Its main purpose is to reduce a common AI editing failure: a local sentence appears improved while meaning, logic, voice, or surrounding context is damaged.
-
----
-
-## Documents
-
-- [Human-readable specification `spec-human.md`](./references/spec-human.md)
-- [AI execution DSL `spec-dsl.md`](./references/spec-dsl.md)
-- [Example library `examples.md`](./references/examples.md)
-- [Regression cases `regression-cases.md`](./references/regression-cases.md)
-
----
-
-## Extensible architecture
-
-Possible future modules include:
-
-- food and beverage writing
-- travel writing
-- investment writing
-- headline editing
-- long-form narrative structure
-- fact/opinion separation
-- publication-specific style modules
-
-`SKILL.md` decides which modules should be loaded for each task.
-
----
-
-#
