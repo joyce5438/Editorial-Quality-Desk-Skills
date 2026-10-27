@@ -135,11 +135,14 @@ Editorial-Quality-Desk-Skills/
 
 # Installation
 
-This project uses a filesystem-based Agent Skill structure.
+Choose the AI tool you use. Editorial Quality Desk primarily targets **Codex** and is also compatible with **Claude Code**.
 
-GitHub code blocks include a native one-click copy button in the upper-right corner.
+> **Model recommendation**
+>
+> GPT-5.6 Terra High already runs this skill very well; GPT-6.1 is not required.  
+> For writing and editing, stronger reasoning does not always produce better prose. Mid-tier models can sometimes be a better fit for tone, rhythm, and natural wording.
 
-## Codex: project-level installation
+## Codex
 
 Run from your project root:
 
@@ -148,26 +151,13 @@ mkdir -p .agents/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .agents/skills/editorial-quality-desk
 ```
 
-After installation:
-
-```text
-your-project/
-└─ .agents/
-   └─ skills/
-      └─ editorial-quality-desk/
-         ├─ SKILL.md
-         └─ references/
-```
-
 ### Update
 
 ```bash
 git -C .agents/skills/editorial-quality-desk pull --ff-only
 ```
 
----
-
-## Claude Code: project-level installation
+## Claude Code
 
 Run from your project root:
 
@@ -176,50 +166,13 @@ mkdir -p .claude/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .claude/skills/editorial-quality-desk
 ```
 
-After installation:
-
-```text
-your-project/
-└─ .claude/
-   └─ skills/
-      └─ editorial-quality-desk/
-         ├─ SKILL.md
-         └─ references/
-```
-
 ### Update
 
 ```bash
 git -C .claude/skills/editorial-quality-desk pull --ff-only
 ```
 
----
-
-## Claude Code: personal installation
-
-To make the Skill available across projects:
-
-```bash
-mkdir -p ~/.claude/skills
-git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git ~/.claude/skills/editorial-quality-desk
-```
-
-### Update
-
-```bash
-git -C ~/.claude/skills/editorial-quality-desk pull --ff-only
-```
-
----
-
-## Manual installation
-
-You can also download the entire repository and place it in the appropriate Skill directory.
-
-**Repository:**  
-[joyce5438/Editorial-Quality-Desk-Skills](https://github.com/joyce5438/Editorial-Quality-Desk-Skills)
-
-Keep `SKILL.md` and `references/` in the same Skill directory.
+After installing or updating, start a new session.
 
 ---
 
