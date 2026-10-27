@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "editorial-quality-desk",
+  "version": "1.0.0",
+  "description": "A modular editorial quality control skill for AI-assisted writing and editing, optimized for Chinese writing.",
+  "author": {
+    "name": "joyce5438",
+    "url": "https://github.com/joyce5438"
+  },
+  "homepage": "https://github.com/joyce5438/Editorial-Quality-Desk-Skills",
+  "repository": "https://github.com/joyce5438/Editorial-Quality-Desk-Skills",
+  "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Editorial Quality Desk",
+        "shortDescription": "Editorial quality control for AI-assisted writing and editing"
+      }
+    }
+  }
+}
