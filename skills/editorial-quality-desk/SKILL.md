@@ -29,6 +29,25 @@ Detailed writing rules belong in referenced modules, not in this controller.
 
 ---
 
+## Source maintenance
+
+The root `SKILL.md` and root `references/` directory are the canonical source of truth for this skill.
+
+Do not maintain the packaged copies independently:
+
+- `skills/editorial-quality-desk/`
+- `plugins/editorial-quality-desk/skills/editorial-quality-desk/`
+
+After changing the root skill or its references, run:
+
+```text
+bash scripts/sync-skill-packages.sh
+```
+
+The repository CI verifies that both packaged copies remain identical to the canonical root source.
+
+---
+
 ## 1. Activation
 
 Explicit natural-language aliases also activate this skill:
