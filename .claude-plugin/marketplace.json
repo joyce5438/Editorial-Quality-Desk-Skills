@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "editorial-quality-desk",
+  "description": "Editorial Quality Desk plugin marketplace.",
+  "owner": {
+    "name": "joyce5438"
+  },
+  "plugins": [
+    {
+      "name": "editorial-quality-desk",
+      "description": "Editorial quality control for AI-assisted writing and editing, optimized for Chinese writing.",
+      "author": {
+        "name": "joyce5438"
+      },
+      "source": "./plugins/editorial-quality-desk",
+      "category": "productivity",
+      "homepage": "https://github.com/joyce5438/Editorial-Quality-Desk-Skills"
+    }
+  ]
+}
