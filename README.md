@@ -177,6 +177,18 @@ After installing or updating, start a new session.
 
 # Usage
 
+Suitable for tasks such as:
+
+- article editing
+- rewriting
+- proofreading
+- paragraph restructuring
+- reducing AI-like phrasing
+- improving headings and subheadings
+- controlling long sentences
+- checking contrast and transition logic
+- preserving author voice while improving readability
+
 Standard invocation:
 
 ```text
@@ -194,3 +206,6 @@ You can also append the task directly:
 ```text
 Call editor. Review this draft.
 ```
+
+---
+
