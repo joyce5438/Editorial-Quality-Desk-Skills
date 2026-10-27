@@ -159,6 +159,18 @@ codex plugin marketplace upgrade editorial-quality-desk
 
 # 使用方式
 
+适合下列任务：
+
+- 编辑文章
+- 改写
+- 校稿
+- 重整段落
+- 降低 AI 味
+- 改善标题与小标题
+- 控制长句
+- 检查对比与转折词
+- 在改善可读性的同时保留作者声音
+
 标准调用：
 
 ```text
@@ -176,3 +188,6 @@ Use Editorial Quality Desk.
 ```text
 呼叫編輯，檢查這篇文章。
 ```
+
+---
+
