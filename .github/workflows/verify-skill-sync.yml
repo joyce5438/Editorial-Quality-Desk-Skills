@@ -1,0 +1,33 @@
+name: Verify skill package sync
+
+on:
+  push:
+    paths:
+      - "SKILL.md"
+      - "references/**"
+      - "skills/editorial-quality-desk/**"
+      - "plugins/editorial-quality-desk/skills/editorial-quality-desk/**"
+      - "scripts/sync-skill-packages.sh"
+      - "scripts/check-skill-packages.sh"
+      - ".github/workflows/verify-skill-sync.yml"
+  pull_request:
+    paths:
+      - "SKILL.md"
+      - "references/**"
+      - "skills/editorial-quality-desk/**"
+      - "plugins/editorial-quality-desk/skills/editorial-quality-desk/**"
+      - "scripts/sync-skill-packages.sh"
+      - "scripts/check-skill-packages.sh"
+      - ".github/workflows/verify-skill-sync.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify packaged copies match root source
+        shell: bash
+        run: bash scripts/check-skill-packages.sh
