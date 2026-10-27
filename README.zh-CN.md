@@ -144,17 +144,16 @@ Editorial-Quality-Desk-Skills/
 
 ## Codex
 
-在项目根目录执行：
+将本项目加入 Codex Plugin Marketplace：
 
 ```bash
-mkdir -p .agents/skills
-git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .agents/skills/editorial-quality-desk
+codex plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
 ```
 
 ### 更新
 
 ```bash
-git -C .agents/skills/editorial-quality-desk pull --ff-only
+codex plugin marketplace upgrade editorial-quality-desk
 ```
 
 ## Claude Code
