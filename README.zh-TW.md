@@ -135,11 +135,14 @@ Editorial-Quality-Desk-Skills/
 
 # 安裝
 
-本專案採用檔案系統式 Agent Skill。
+選擇你使用的 AI 工具。Editorial Quality Desk 以 **Codex** 為主要支援環境，並相容於 **Claude Code**。
 
-以下指令區塊在 GitHub 頁面右上角會有原生「一鍵複製」按鈕。
+> **模型建議**
+>
+> GPT-5.6 Terra High 已能很好地執行本技能，不一定需要使用 GPT-6.1。  
+> 寫作與編輯任務並非推理能力越高越好；中等模型在語氣、節奏與文字自然度上，有時反而更適合。
 
-## Codex：專案層級安裝
+## Codex
 
 在專案根目錄執行：
 
@@ -148,26 +151,13 @@ mkdir -p .agents/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .agents/skills/editorial-quality-desk
 ```
 
-安裝後：
-
-```text
-your-project/
-└─ .agents/
-   └─ skills/
-      └─ editorial-quality-desk/
-         ├─ SKILL.md
-         └─ references/
-```
-
 ### 更新
 
 ```bash
 git -C .agents/skills/editorial-quality-desk pull --ff-only
 ```
 
----
-
-## Claude Code：專案層級安裝
+## Claude Code
 
 在專案根目錄執行：
 
@@ -176,50 +166,13 @@ mkdir -p .claude/skills
 git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .claude/skills/editorial-quality-desk
 ```
 
-安裝後：
-
-```text
-your-project/
-└─ .claude/
-   └─ skills/
-      └─ editorial-quality-desk/
-         ├─ SKILL.md
-         └─ references/
-```
-
 ### 更新
 
 ```bash
 git -C .claude/skills/editorial-quality-desk pull --ff-only
 ```
 
----
-
-## Claude Code：個人層級安裝
-
-讓 Skill 可跨專案使用：
-
-```bash
-mkdir -p ~/.claude/skills
-git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git ~/.claude/skills/editorial-quality-desk
-```
-
-### 更新
-
-```bash
-git -C ~/.claude/skills/editorial-quality-desk pull --ff-only
-```
-
----
-
-## 手動安裝
-
-也可以直接下載整個 repository，放進對應的 Skill 目錄。
-
-**專案連結：**  
-[joyce5438/Editorial-Quality-Desk-Skills](https://github.com/joyce5438/Editorial-Quality-Desk-Skills)
-
-請保持 `SKILL.md` 與 `references/` 在同一個 Skill 目錄內。
+安裝或更新完成後，請開啟新的工作階段。
 
 ---
 
