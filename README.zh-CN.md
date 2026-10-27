@@ -115,25 +115,7 @@ Editorial Quality Desk Skills 是一套供 AI 辅助写作与编辑使用的模�
 
 ---
 
-## 项目结构
-
-```text
-Editorial-Quality-Desk-Skills/
-├─ README.md
-├─ README.zh-TW.md
-├─ README.zh-CN.md
-├─ README.ko.md
-├─ SKILL.md
-└─ references/
-   ├─ spec-dsl.md
-   ├─ spec-human.md
-   ├─ examples.md
-   └─ regression-cases.md
-```
-
----
-
-# 安装
+## 安装
 
 选择你使用的 AI 工具。Editorial Quality Desk 以 **Codex** 为主要支持环境，并兼容 **Claude Code**。
 
@@ -144,15 +126,15 @@ Editorial-Quality-Desk-Skills/
 
 ## Codex
 
-将本项目加入 Codex Plugin Marketplace：
+将以下指令贴到 Codex 对话中：
 
-```bash
-codex plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
+```text
+codex plugin marketplace add and install joyce5438/Editorial-Quality-Desk-Skills
 ```
 
 ### 更新
 
-```bash
+```text
 codex plugin marketplace upgrade editorial-quality-desk
 ```
 
@@ -203,80 +185,4 @@ Review this draft with Editorial Quality Control v1.0.
 
 ---
 
-## 为什么有 DSL
-
-`references/spec-dsl.md` 不是装饰性的伪代码，而是用操作型格式描述编辑行为：
-
-```text
-OBJECTIVE
-→ HARD CONSTRAINTS
-→ QUALITY CHECKS
-→ PATCH
-→ LOCAL RECHECK
-→ GLOBAL RECHECK
-→ ROLLBACK IF NEEDED
-→ STOP WHEN ONLY OPTIONAL STYLE ALTERNATIVES REMAIN
-```
-
-它主要用来降低 AI 编辑常见的问题：局部句子看似变好，但原意、逻辑、语气或上下文反而被破坏。
-
----
-
-## 文件
-
-- [人类可读规范 `spec-human.md`](./references/spec-human.md)
-- [AI 执行 DSL `spec-dsl.md`](./references/spec-dsl.md)
-- [案例库 `examples.md`](./references/examples.md)
-- [回归案例 `regression-cases.md`](./references/regression-cases.md)
-
----
-
-## 可扩展架构
-
-未来可以新增：
-
-- 饮食与品茗写作
-- 旅游写作
-- 投资写作
-- 标题编辑
-- 长文叙事结构
-- 事实／观点分离
-- 特定媒体风格模块
-
-由 `SKILL.md` 根据任务决定加载哪些模块。
-
----
-
-## 兼容性
-
-当前设计目标：
-
-- OpenAI Codex / Agent Skills
-- Claude Code custom Skills
-
-核心规则尽量保持 provider-neutral，避免把内容绑定在单一模型或平台。
-
----
-
-## 状态
-
-**v1.0**
-
-主控架构与 Editorial Quality Control 基础模块已可使用。
-
-`examples.md` 与 `regression-cases.md` 会优先从真实编辑案例持续累积，而不是预先塞满人工案例。
-
----
-
-## 核心原则
-
-> **好的编辑应该让文字更清楚，而不是让读者看见编辑有多会写。**
-
-> **可以改，不代表应该改。**
-
----
-
-## 作者
-
-**Austin**  
-https://x.com/austinsayhi
+#
