@@ -159,6 +159,18 @@ codex plugin marketplace upgrade editorial-quality-desk
 
 # 사용 방법
 
+다음 작업에 적합합니다.
+
+- 글 편집
+- 리라이팅
+- 교정
+- 문단 재구성
+- AI스러운 표현 줄이기
+- 제목과 소제목 개선
+- 긴 문장 제어
+- 대조와 전환 표현 점검
+- 가독성을 높이면서 저자 목소리 보존
+
 표준 호출:
 
 ```text
@@ -176,3 +188,6 @@ Call editor.
 ```text
 Call editor. Review this draft.
 ```
+
+---
+
