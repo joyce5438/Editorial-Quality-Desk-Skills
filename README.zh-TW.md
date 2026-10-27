@@ -158,17 +158,17 @@ codex plugin marketplace upgrade editorial-quality-desk
 
 ## Claude Code
 
-在專案根目錄執行：
+將本專案加入 Claude Code Plugin Marketplace，接著安裝技能：
 
-```bash
-mkdir -p .claude/skills
-git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .claude/skills/editorial-quality-desk
+```text
+/plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
+/plugin install editorial-quality-desk@editorial-quality-desk
 ```
 
 ### 更新
 
-```bash
-git -C .claude/skills/editorial-quality-desk pull --ff-only
+```text
+/plugin marketplace update editorial-quality-desk
 ```
 
 安裝或更新完成後，請開啟新的工作階段。
