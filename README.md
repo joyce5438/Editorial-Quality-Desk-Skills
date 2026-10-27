@@ -83,9 +83,7 @@ The current foundational module uses this priority order:
 
 ### Minimum intervention
 
-The fact that a sentence “could be written another way” does not mean it should be rewritten.
-
-Edit only when there is a material improvement.
+The fact that a sentence “could be written another way” does not mean it should be rewritten. Edit only when there is a material improvement.
 
 ---
 
@@ -161,9 +159,9 @@ After installing or updating, start a new session.
 
 Suitable for tasks such as:
 
-- article editing
-- rewriting
-- proofreading
+- article writing
+- article rewriting
+- article proofreading
 - paragraph restructuring
 - reducing AI-like phrasing
 - improving headings and subheadings
