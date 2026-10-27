@@ -159,74 +159,20 @@ codex plugin marketplace upgrade editorial-quality-desk
 
 # 사용 방법
 
-다음 작업에 적합합니다.
-
-- 글 편집
-- 리라이팅
-- 교정
-- 문단 재구성
-- AI스러운 표현 줄이기
-- 제목과 소제목 개선
-- 긴 문장 제어
-- 대조와 전환 표현 점검
-- 가독성을 높이면서 저자 목소리 보존
-
-명시적으로 호출할 수도 있습니다.
+표준 호출:
 
 ```text
-Use the Editorial Quality Desk skill to edit this article.
+Use Editorial Quality Desk.
 ```
 
-또는:
+자연어 단축 호출:
 
 ```text
-Review this draft with Editorial Quality Control v1.0.
+Call editor.
 ```
 
----
-
-## 왜 DSL이 있는가
-
-`references/spec-dsl.md`은 장식용 의사 코드가 아니라 편집 행동을 운영 가능한 형식으로 표현합니다.
+작업을 바로 이어서 입력할 수도 있습니다:
 
 ```text
-OBJECTIVE
-→ HARD CONSTRAINTS
-→ QUALITY CHECKS
-→ PATCH
-→ LOCAL RECHECK
-→ GLOBAL RECHECK
-→ ROLLBACK IF NEEDED
-→ STOP WHEN ONLY OPTIONAL STYLE ALTERNATIVES REMAIN
+Call editor. Review this draft.
 ```
-
-주된 목적은 AI 편집에서 흔한 문제를 줄이는 것입니다. 한 문장이 더 좋아 보이더라도 원래 의미, 논리, 저자 목소리, 주변 문맥이 손상되는 상황을 방지합니다.
-
----
-
-## 문서
-
-- [사람이 읽는 규칙 `spec-human.md`](./references/spec-human.md)
-- [AI 실행 DSL `spec-dsl.md`](./references/spec-dsl.md)
-- [예시 라이브러리 `examples.md`](./references/examples.md)
-- [회귀 사례 `regression-cases.md`](./references/regression-cases.md)
-
----
-
-## 확장 가능한 구조
-
-향후 다음과 같은 모듈을 추가할 수 있습니다.
-
-- 음식 및 차·음료 글쓰기
-- 여행 글쓰기
-- 투자 글쓰기
-- 제목 편집
-- 장문 서사 구조
-- 사실／의견 분리
-- 특정 매체 스타일 모듈
-
-`SKILL.md`가 작업에 따라 어떤 모듈을 로드할지 결정합니다.
-
----
-
-#
