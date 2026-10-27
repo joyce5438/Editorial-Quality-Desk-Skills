@@ -31,6 +31,13 @@ Detailed writing rules belong in referenced modules, not in this controller.
 
 ## 1. Activation
 
+Explicit natural-language aliases also activate this skill:
+
+- `Call editor.`
+- `呼叫編輯。`
+
+These aliases invoke the same Editorial Quality Desk workflow as the full skill name and may be followed by a task, target, or instruction.
+
 Activate this skill when the user asks to:
 
 - edit an article, essay, review, feature, blog post, report prose, or long-form copy;
