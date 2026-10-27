@@ -23,7 +23,7 @@
 
 **Editorial Quality Desk Skills v1.0**
 
-当前版本建立了完整的主控架构，并包含第一个基础模块：
+当前版本建立了完整的主控架构，并包含一个主技能模块：
 
 **Editorial Quality Control Spec v1.0**
 
@@ -33,7 +33,7 @@
 
 Editorial Quality Desk Skills 是一套供 AI 辅助写作与编辑使用的模块化 Skill 系统。
 
-**技能为跨语言编辑框架，但目前本项目仅以中文写作优化为目标进行实现。**
+**技能为跨语言编辑框架，目前本项目仅以中文写作优化为目标进行实现。**
 
 本技能将“主控调度”与“实际编写规则”分开：
 
@@ -169,7 +169,7 @@ codex plugin marketplace upgrade editorial-quality-desk
 - 改善标题与小标题
 - 控制长句
 - 检查对比与转折词
-- 在改善可读性的同时保留作者声音
+- 改善可读性的同时保留作者口吻
 
 标准调用：
 
@@ -186,7 +186,7 @@ Use Editorial Quality Desk.
 也可以直接接上任务：
 
 ```text
-呼叫編輯，檢查這篇文章。
+呼叫編輯，檢查文章。
 ```
 
 ---
