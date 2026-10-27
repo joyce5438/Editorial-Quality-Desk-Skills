@@ -1,7 +1,7 @@
 # Editorial Quality Desk Skills
 
 <p align="center">
-  <strong>A modular quality-control system for AI-assisted writing and editing.</strong>
+  <strong>A modular AI writing and editorial quality control system.</strong>
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 **Editorial Quality Desk Skills v1.0**
 
-The current version establishes the complete controller architecture and includes the first baseline module:
+The current version establishes the complete controller architecture and includes the first foundational module:
 
 **Editorial Quality Control Spec v1.0**
 
@@ -33,44 +33,44 @@ The current version establishes the complete controller architecture and include
 
 Editorial Quality Desk Skills is a modular Skill system for AI-assisted writing and editing.
 
-**The skill is built on a cross-language editorial framework, but this project currently implements it with Chinese writing optimization as the primary target.**
+**The skill is a cross-language editorial framework, but this project is currently implemented with Chinese writing optimization as its sole target.**
 
-The skill separates **controller orchestration** from **actual editorial rules**:
+The skill separates the “controller and routing” layer from the “actual writing and editing rules”:
 
-- `SKILL.md`: controller, activation, routing, module loading, priority, conflict handling, and acceptance.
-- `references/spec-dsl.md`: the AI-executable Editorial Quality Control v1.0 DSL.
-- `references/spec-human.md`: the complete human-readable specification.
+- `SKILL.md`: controller, activation, routing, module loading, priorities, conflict handling, and acceptance.
+- `references/spec-dsl.md`: Editorial Quality Control v1.0 DSL for AI execution.
+- `references/spec-human.md`: complete human-readable specification.
 - `references/examples.md`: positive and negative example library.
 - `references/regression-cases.md`: known failure cases and regression-prevention rules.
 
-`SKILL.md` is intentionally kept lean instead of becoming a container for every writing rule. Future writing subskills can be added as independent modules, with the controller deciding whether they should be loaded for a given task.
+`SKILL.md` is intentionally kept lean instead of containing every writing rule. Future writing subskills can be added as independent modules, and the controller decides whether to load them according to the task.
 
 ---
 
 ## Design principles
 
-### The controller is not the rulebook
+### The controller is not the complete rulebook
 
 `SKILL.md` handles:
 
-- activation timing
+- when to activate
 - task routing
 - module loading
 - execution order
-- priority
+- priorities
 - conflict handling
 - acceptance
 - stopping conditions
 
-The actual editorial and writing rules live in independent modules.
+The actual writing and editing rules live in independent modules.
 
 ### Progressive loading
 
-Load only the rules required by the current task instead of forcing every module into context every time.
+Load only the rules needed for the current task instead of putting every module into context every time.
 
 ### Preserve first, polish second
 
-The current baseline module uses this priority order:
+The current foundational module uses this priority order:
 
 1. factual integrity
 2. preservation of original meaning
@@ -83,7 +83,7 @@ The current baseline module uses this priority order:
 
 ### Minimum intervention
 
-The existence of another possible wording is not, by itself, a reason to rewrite a sentence.
+The fact that a sentence “could be written another way” does not mean it should be rewritten.
 
 Edit only when there is a material improvement.
 
@@ -102,45 +102,27 @@ Includes:
 - paragraph structure
 - long-sentence control
 - natural sentence rhythm
-- contrast and transition control
-- prevention of invented “not A, but B” oppositions
+- contrast and transitions
+- avoiding invented “not A, but B” contrasts
 - heading and subheading quality
-- avoidance of overly literary headings
-- AI-style detection
-- avoidance of pseudo-depth and empty abstraction
-- author-voice preservation
+- avoiding overly literary headings
+- AI-style phrasing checks
+- avoiding pseudo-depth and empty abstractions
+- preservation of author voice
 - local side-effect checks
-- full-text recursive review
-- rollback when an edit damages a higher-priority dimension
+- recursive full-text review
+- rollback when an edit damages a higher-priority requirement
 
 ---
 
-## Repository structure
+## Installation
 
-```text
-Editorial-Quality-Desk-Skills/
-├─ README.md
-├─ README.zh-TW.md
-├─ README.zh-CN.md
-├─ README.ko.md
-├─ SKILL.md
-└─ references/
-   ├─ spec-dsl.md
-   ├─ spec-human.md
-   ├─ examples.md
-   └─ regression-cases.md
-```
-
----
-
-# Installation
-
-Choose the AI tool you use. Editorial Quality Desk primarily targets **Codex** and is also compatible with **Claude Code**.
+Choose the AI tool you use. Editorial Quality Desk primarily supports **Codex** and is also compatible with **Claude Code**.
 
 > **Model recommendation**
 >
 > GPT-5.6 Terra High already runs this skill very well; GPT-6.1 is not required.  
-> For writing and editing, stronger reasoning does not always produce better prose. Mid-tier models can sometimes be a better fit for tone, rhythm, and natural wording.
+> For writing and editing tasks, stronger reasoning does not necessarily produce better results; mid-tier models can sometimes be a better fit for tone, rhythm, and natural wording.
 
 ## Codex
 
@@ -158,7 +140,7 @@ codex plugin marketplace upgrade editorial-quality-desk
 
 ## Claude Code
 
-Add this repository as a Claude Code plugin marketplace, then install the plugin:
+Add this project to the Claude Code Plugin Marketplace, then install the skill:
 
 ```text
 /plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
@@ -186,7 +168,7 @@ Suitable for tasks such as:
 - reducing AI-like phrasing
 - improving headings and subheadings
 - controlling long sentences
-- checking contrast and transition logic
+- checking contrast and transitions
 - preserving author voice while improving readability
 
 Standard invocation:
@@ -204,8 +186,7 @@ Call editor.
 You can also append the task directly:
 
 ```text
-Call editor. Review this draft.
+Call editor. Review this article.
 ```
 
 ---
-
