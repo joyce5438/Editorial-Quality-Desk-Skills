@@ -115,25 +115,7 @@ Editorial Quality Desk Skills는 AI 보조 글쓰기와 편집을 위한 모듈�
 
 ---
 
-## 프로젝트 구조
-
-```text
-Editorial-Quality-Desk-Skills/
-├─ README.md
-├─ README.zh-TW.md
-├─ README.zh-CN.md
-├─ README.ko.md
-├─ SKILL.md
-└─ references/
-   ├─ spec-dsl.md
-   ├─ spec-human.md
-   ├─ examples.md
-   └─ regression-cases.md
-```
-
----
-
-# 설치
+## 설치
 
 사용 중인 AI 도구를 선택하세요. Editorial Quality Desk는 **Codex**를 주요 지원 환경으로 하며 **Claude Code**와도 호환됩니다.
 
@@ -144,15 +126,15 @@ Editorial-Quality-Desk-Skills/
 
 ## Codex
 
-이 저장소를 Codex Plugin Marketplace로 추가합니다:
+다음 지시문을 Codex 대화창에 붙여 넣으세요:
 
-```bash
-codex plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
+```text
+codex plugin marketplace add and install joyce5438/Editorial-Quality-Desk-Skills
 ```
 
 ### 업데이트
 
-```bash
+```text
 codex plugin marketplace upgrade editorial-quality-desk
 ```
 
@@ -247,36 +229,4 @@ OBJECTIVE
 
 ---
 
-## 호환성
-
-현재 설계 대상:
-
-- OpenAI Codex / Agent Skills
-- Claude Code custom Skills
-
-핵심 규칙은 가능한 한 provider-neutral하게 유지하여 특정 모델이나 플랫폼에 종속되지 않도록 합니다.
-
----
-
-## 상태
-
-**v1.0**
-
-컨트롤러 구조와 Editorial Quality Control 기본 모듈은 현재 사용할 수 있습니다.
-
-`examples.md`와 `regression-cases.md`는 인위적인 예시로 미리 채우기보다 실제 편집 사례를 통해 계속 축적하는 것을 원칙으로 합니다.
-
----
-
-## 핵심 원칙
-
-> **좋은 편집은 편집자가 얼마나 잘 쓰는지를 보여주는 것이 아니라, 글을 더 명확하게 만들어야 합니다.**
-
-> **다시 쓸 수 있다고 해서 반드시 다시 써야 하는 것은 아닙니다.**
-
----
-
-## 저자
-
-**Austin**  
-https://x.com/austinsayhi
+#
