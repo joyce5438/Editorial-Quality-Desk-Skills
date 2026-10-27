@@ -23,7 +23,7 @@
 
 **Editorial Quality Desk Skills v1.0**
 
-현재 버전은 완전한 컨트롤러 구조를 구축하고 첫 번째 기본 모듈을 포함합니다.
+현재 버전은 완전한 컨트롤러 구조를 구축하고 하나의 주요 Skill 모듈을 포함합니다.
 
 **Editorial Quality Control Spec v1.0**
 
@@ -33,7 +33,7 @@
 
 Editorial Quality Desk Skills는 AI를 활용한 글쓰기와 편집을 위한 모듈형 Skill 시스템입니다.
 
-**이 Skill은 다국어 편집 프레임워크이지만, 현재 이 프로젝트는 중국어 글쓰기 최적화만을 목표로 구현되어 있습니다.**
+**이 Skill은 다국어 편집 프레임워크이며, 현재 이 프로젝트는 중국어 글쓰기 최적화를 목표로 구현되어 있습니다.**
 
 이 Skill은 “컨트롤러 및 라우팅”과 “실제 글쓰기·편집 규칙”을 분리합니다.
 
@@ -169,7 +169,7 @@ codex plugin marketplace upgrade editorial-quality-desk
 - 제목과 소제목 개선
 - 긴 문장 제어
 - 대조와 전환 표현 점검
-- 가독성을 높이면서 저자 목소리 보존
+- 가독성을 높이면서 저자의 말투 보존
 
 표준 호출:
 
@@ -186,7 +186,7 @@ Call editor.
 작업을 바로 이어서 입력할 수도 있습니다:
 
 ```text
-Call editor. Review this article.
+Call editor. Review the article.
 ```
 
 ---
