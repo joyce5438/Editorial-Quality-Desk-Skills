@@ -144,17 +144,16 @@ Choose the AI tool you use. Editorial Quality Desk primarily targets **Codex** a
 
 ## Codex
 
-Run from your project root:
+Add this repository as a Codex plugin marketplace:
 
 ```bash
-mkdir -p .agents/skills
-git clone --depth 1 https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git .agents/skills/editorial-quality-desk
+codex plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
 ```
 
 ### Update
 
 ```bash
-git -C .agents/skills/editorial-quality-desk pull --ff-only
+codex plugin marketplace upgrade editorial-quality-desk
 ```
 
 ## Claude Code
