@@ -1,0 +1,21 @@
+{
+  "name": "editorial-quality-desk",
+  "interface": {
+    "displayName": "Editorial Quality Desk"
+  },
+  "plugins": [
+    {
+      "name": "editorial-quality-desk",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
