@@ -119,7 +119,7 @@ Choose the AI tool you use. Editorial Quality Desk primarily supports **Codex** 
 
 > **Model recommendation**
 >
-> GPT-5.6 Terra High already runs this skill very well; GPT-6.1 is not required.  
+> GPT-6.1 Terra Low,Med,High already runs this skill very well; GPT-6.1 Sol is not required.  
 > For writing and editing tasks, stronger reasoning does not necessarily produce better results; mid-tier models can sometimes be a better fit for tone, rhythm, and natural wording.
 
 ## Codex
