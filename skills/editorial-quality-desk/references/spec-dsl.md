@@ -513,6 +513,53 @@ preserve meaning, facts, logic, uncertainty, emphasis, and rhythm
 ---
 
 ```text
+::RULE{research_boundary_in_prose}
+
+[CONNECTS_TO]
+unnecessary_defensive_negation
+information_density
+semantic_redundancy
+ai_voice
+minimum_intervention
+factual_integrity
+uncertainty_preservation
+
+[PRINCIPLE]
+Research rigor must guide the writing.
+Not every internal research limitation needs to appear in published prose.
+
+[IF]
+a qualification prevents a material historical, factual,
+or logical misunderstanding
+=> [KEEP]
+
+[IF]
+a qualification merely warns against a generalization
+that the article never makes
+AND removing or integrating it preserves factual accuracy,
+evidence limits, and the scope of the source
+=> [REMOVE_OR_INTEGRATE_MINIMALLY]
+
+[GLOBAL_CHECK]
+Review repeated qualifications across the entire article,
+not only within individual paragraphs.
+
+[IF]
+multiple passages repeat the same defensive function
+without adding new evidence or necessary distinctions
+=> [PATCH_MINIMUM_NECESSARY]
+
+[NEVER]
+- remove meaningful uncertainty or source attribution
+- imply broader evidence than sources support
+- convert individual cases into general claims
+- expose routine research cautions as prose when they do not help readers
+- replace necessary caveats with unsupported positive claims
+```
+
+---
+
+```text
 ::RULE{transition}
 
 [SCAN]
