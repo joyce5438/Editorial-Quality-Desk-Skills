@@ -119,7 +119,7 @@ Editorial Quality Desk Skills 是一套供 AI 協助寫作與編輯使用的模�
 
 > **模型建議**
 >
-> GPT-5.6 Terra High 已能很好地執行本技能，不一定需要使用 GPT-6.1。  
+> GPT-6.1 Terra Low,Med,High 已能很好地執行本技能，不一定需要使用 GPT-6.1 Sol。  
 > 寫作與編輯任務並非推理能力越高越好；中等模型在語氣、節奏與文字自然度上，有時反而更適合。
 
 ## Codex
