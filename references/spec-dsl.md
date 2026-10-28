@@ -982,12 +982,14 @@ priority:
 4. uncertainty_damage
 5. clarity_problem
 6. false_contrast
-7. structural_weakness
-8. excessive_sentence_length
-9. semantic_redundancy
-10. ai_voice
-11. heading_weakness
-12. stylistic_polish
+7. unnecessary_defensive_negation
+8. research_boundary_in_prose
+9. structural_weakness
+10. excessive_sentence_length
+11. semantic_redundancy
+12. ai_voice
+13. heading_weakness
+14. stylistic_polish
 
 [PATCH]
 patch only material weaknesses
@@ -1041,6 +1043,8 @@ author_voice
 [ ] degree and emphasis preserved
 [ ] no invented claim
 [ ] no false opposition
+[ ] no repeated or unnecessary defensive qualifications across the full article
+[ ] research boundaries appear in prose only when materially useful to readers; factual limits remain intact
 [ ] valid contrast preserved
 [ ] 「不是 A，而是 B」 used only when A is real and necessary
 [ ] transitions are functional and non-repetitive
