@@ -445,6 +445,74 @@ convert valid contrast into causality, sequence, or simple parallelism
 ---
 
 ```text
+::RULE{unnecessary_defensive_negation}
+
+[CONNECTS_TO]
+contrast
+semantic_redundancy
+information_density
+ai_voice
+minimum_intervention
+logical_preservation
+uncertainty_preservation
+
+[SCAN_FOR]
+不能直接等同
+不必然
+不足以
+不能擴大成
+不能簡單視為
+不能一概而論
+不代表
+並不意味著
+未必
+不只是
+不在於
+不宜
+並非
+不是只有
+不是說
+不是在說
+
+[ALSO_SCAN_FOR]
+negation of a claim not established in context
+repeated correction of hypothetical misconceptions
+unnecessary defensive qualification
+contrast without a meaningful opposing position
+repeated "not X, but Y" framing
+
+[PRINCIPLE]
+scan_hit != editorial_defect
+Review the sentence, adjacent paragraphs, and full-article argument.
+Do not treat the watchlist as banned vocabulary.
+
+[IF]
+negation clarifies a real misconception, factual boundary,
+research limitation, meaningful uncertainty, or valid argument
+=> [KEEP]
+
+[IF]
+(negation invents an opposing claim OR merely repeats an
+already established qualification)
+AND stating the substantive point directly materially
+improves clarity without semantic loss
+=> [PATCH_MINIMUM_NECESSARY]
+=> [STATE_SUBSTANTIVE_CLAIM_DIRECTLY]
+
+[NEVER]
+- replace an artificial contrast with another artificial contrast
+- remove a necessary caveat or evidence boundary
+- convert uncertainty into certainty
+- rewrite solely because a scan term appears
+- force uniform sentence endings
+
+[CHECK_AFTER_PATCH]
+preserve meaning, facts, logic, uncertainty, emphasis, and rhythm
+```
+
+---
+
+```text
 ::RULE{transition}
 
 [SCAN]
