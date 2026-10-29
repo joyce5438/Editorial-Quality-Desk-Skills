@@ -52,9 +52,13 @@ The repository CI verifies that both packaged copies remain identical to the can
 
 Explicit natural-language aliases also activate this skill:
 
-- `Call editor.`
-- `Editorial Quality Desk` (legacy name)
-- `呼叫編輯。`
+- `Ideo Edit`
+- `Edit text`
+- `Edit article`
+- `呼叫編輯`
+- `修文章`
+- `編輯文章`
+- `改文章`
 
 These aliases invoke the same Ideo Edit workflow as the full skill name and may be followed by a task, target, or instruction.
 

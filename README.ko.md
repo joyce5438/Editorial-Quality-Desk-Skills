@@ -178,13 +178,17 @@ Use Ideo Edit.
 자연어 단축 호출:
 
 ```text
-Call editor.
+Edit article.
 ```
 
 작업을 바로 이어서 입력할 수도 있습니다:
 
 ```text
-Call editor. Review the article.
+Ideo Edit. Review the article.
 ```
 
 ---
+
+## Invocation aliases
+
+`Ideo Edit` · `Edit text` · `Edit article` · `呼叫編輯` · `修文章` · `編輯文章` · `改文章`

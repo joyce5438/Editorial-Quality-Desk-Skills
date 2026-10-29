@@ -189,3 +189,7 @@ Use Ideo Edit.
 
 ---
 
+
+## Invocation aliases
+
+`Ideo Edit` · `Edit text` · `Edit article` · `呼叫編輯` · `修文章` · `編輯文章` · `改文章`

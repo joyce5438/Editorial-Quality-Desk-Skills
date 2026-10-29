@@ -178,13 +178,17 @@ Use Ideo Edit.
 Short natural-language invocation:
 
 ```text
-Call editor.
+Edit article.
 ```
 
 You can also append the task directly:
 
 ```text
-Call editor. Review the article.
+Ideo Edit. Review the article.
 ```
 
 ---
+
+## Invocation aliases
+
+`Ideo Edit` · `Edit text` · `Edit article` · `呼叫編輯` · `修文章` · `編輯文章` · `改文章`
