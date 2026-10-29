@@ -956,6 +956,25 @@ P4_USUALLY_KEEP:
 ```text
 ::LOOP{editorial_self_review|trigger:on_completion}
 
+[EXECUTION]
+run two distinct full-text review passes before delivery; do not treat a clean first pass as completion
+
+[PASS_1 — EDITORIAL_REPAIR]
+apply [READ] through [RECHECK_GLOBAL] to the complete draft; patch only material weaknesses
+
+[PASS_2 — FRESH_VALIDATION]
+after PASS_1 stabilizes, re-read the complete revised article as a new review target
+apply [READ] through [RECHECK_GLOBAL] again using all existing rules and priorities
+reconsider PASS_1 judgments rather than assuming they were correct
+check both missed weaknesses and damage introduced by edits, including openings, transitions, endings, attribution, and factual boundaries
+patch only material weaknesses; recheck any patches locally and globally
+
+[DELIVERY_GATE]
+run ::FINAL_CHECK against the result of PASS_2
+never skip PASS_2 because PASS_1 found no defects
+if a material weakness remains, repair and revalidate before delivery
+these are two editorial review passes, not two research or drafting cycles
+
 [READ]
 read entire edited text as one continuous piece
 
