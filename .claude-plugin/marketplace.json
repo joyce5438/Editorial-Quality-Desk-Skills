@@ -1,20 +1,20 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "editorial-quality-desk",
-  "description": "Editorial Quality Desk plugin marketplace.",
+  "name": "ideo-edit",
+  "description": "Ideo Edit plugin marketplace.",
   "owner": {
     "name": "joyce5438"
   },
   "plugins": [
     {
-      "name": "editorial-quality-desk",
+      "name": "ideo-edit",
       "description": "Editorial quality control for AI-assisted writing and editing, optimized for Chinese writing.",
       "author": {
         "name": "joyce5438"
       },
-      "source": "./plugins/editorial-quality-desk",
+      "source": "./plugins/ideo-edit",
       "category": "productivity",
-      "homepage": "https://github.com/joyce5438/Editorial-Quality-Desk-Skills"
+      "homepage": "https://github.com/joyce5438/Ideo-Edit-Skills"
     }
   ]
 }

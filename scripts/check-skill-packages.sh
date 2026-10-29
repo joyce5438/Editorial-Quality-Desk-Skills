@@ -6,8 +6,8 @@ SOURCE_SKILL="$ROOT/SKILL.md"
 SOURCE_REFS="$ROOT/references"
 
 TARGETS=(
-  "$ROOT/skills/editorial-quality-desk"
-  "$ROOT/plugins/editorial-quality-desk/skills/editorial-quality-desk"
+  "$ROOT/skills/ideo-edit"
+  "$ROOT/plugins/ideo-edit/skills/ideo-edit"
 )
 
 failed=0

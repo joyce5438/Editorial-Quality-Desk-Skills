@@ -5,8 +5,8 @@ on:
     paths:
       - "SKILL.md"
       - "references/**"
-      - "skills/editorial-quality-desk/**"
-      - "plugins/editorial-quality-desk/skills/editorial-quality-desk/**"
+      - "skills/ideo-edit/**"
+      - "plugins/ideo-edit/skills/ideo-edit/**"
       - "scripts/sync-skill-packages.sh"
       - "scripts/check-skill-packages.sh"
       - ".github/workflows/verify-skill-sync.yml"
@@ -14,8 +14,8 @@ on:
     paths:
       - "SKILL.md"
       - "references/**"
-      - "skills/editorial-quality-desk/**"
-      - "plugins/editorial-quality-desk/skills/editorial-quality-desk/**"
+      - "skills/ideo-edit/**"
+      - "plugins/ideo-edit/skills/ideo-edit/**"
       - "scripts/sync-skill-packages.sh"
       - "scripts/check-skill-packages.sh"
       - ".github/workflows/verify-skill-sync.yml"

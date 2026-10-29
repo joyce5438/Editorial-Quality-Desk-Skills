@@ -1,19 +1,19 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "editorial-quality-desk",
+  "name": "ideo-edit",
   "version": "1.0.0",
   "description": "A modular editorial quality control skill for AI-assisted writing and editing, optimized for Chinese writing.",
   "author": {
     "name": "joyce5438",
     "url": "https://github.com/joyce5438"
   },
-  "homepage": "https://github.com/joyce5438/Editorial-Quality-Desk-Skills",
-  "repository": "https://github.com/joyce5438/Editorial-Quality-Desk-Skills",
+  "homepage": "https://github.com/joyce5438/Ideo-Edit-Skills",
+  "repository": "https://github.com/joyce5438/Ideo-Edit-Skills",
   "skills": "./skills/",
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Editorial Quality Desk",
+        "displayName": "Ideo Edit",
         "shortDescription": "Editorial quality control for AI-assisted writing and editing"
       }
     }

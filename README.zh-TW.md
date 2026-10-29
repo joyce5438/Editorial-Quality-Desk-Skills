@@ -1,4 +1,4 @@
-# Editorial Quality Desk Skills
+# Ideo Edit Skills
 
 <p align="center">
   <strong>模組化的 AI 寫作與編輯品質控制系統。</strong>
@@ -21,7 +21,7 @@
 
 ## 版本
 
-**Editorial Quality Desk Skills v1.0**
+**Ideo Edit Skills v1.0**
 
 目前版本建立了完整的主控架構，並包含一個主技能模組：
 
@@ -31,7 +31,7 @@
 
 ## 這個專案是什麼
 
-Editorial Quality Desk Skills 是一套供 AI 協助寫作與編輯使用的模組化 Skill 系統。
+Ideo Edit Skills 是一套供 AI 協助寫作與編輯使用的模組化 Skill 系統。
 
 **技能為跨語言編輯框架，目前本專案我僅以中文寫作最佳化為目標實作。**
 
@@ -115,7 +115,7 @@ Editorial Quality Desk Skills 是一套供 AI 協助寫作與編輯使用的模�
 
 ## 安裝
 
-選擇你使用的 AI 工具。Editorial Quality Desk 以 **Codex** 為主要支援環境，並相容於 **Claude Code**。
+選擇你使用的 AI 工具。Ideo Edit 以 **Codex** 為主要支援環境，並相容於 **Claude Code**。
 
 > **模型建議**
 >
@@ -127,13 +127,13 @@ Editorial Quality Desk Skills 是一套供 AI 協助寫作與編輯使用的模�
 將以下指令貼到 Codex 對話中：
 
 ```text
-codex plugin marketplace add and install joyce5438/Editorial-Quality-Desk-Skills
+codex plugin marketplace add and install joyce5438/Ideo-Edit-Skills
 ```
 
 ### 更新
 
 ```text
-codex plugin marketplace upgrade editorial-quality-desk
+codex plugin marketplace upgrade ideo-edit
 ```
 
 ## Claude Code
@@ -141,14 +141,14 @@ codex plugin marketplace upgrade editorial-quality-desk
 將本專案加入 Claude Code Plugin Marketplace，接著安裝技能：
 
 ```text
-/plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
-/plugin install editorial-quality-desk@editorial-quality-desk
+/plugin marketplace add joyce5438/Ideo-Edit-Skills
+/plugin install ideo-edit@ideo-edit
 ```
 
 ### 更新
 
 ```text
-/plugin marketplace update editorial-quality-desk
+/plugin marketplace update ideo-edit
 ```
 
 安裝或更新完成後，請開啟新的工作階段。
@@ -172,7 +172,7 @@ codex plugin marketplace upgrade editorial-quality-desk
 標準呼叫：
 
 ```text
-Use Editorial Quality Desk.
+Use Ideo Edit.
 ```
 
 自然語言簡語：

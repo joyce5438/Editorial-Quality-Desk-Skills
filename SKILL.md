@@ -1,5 +1,5 @@
 ---
-name: editorial-quality-desk
+name: ideo-edit
 description: >
   Use for editing, rewriting, proofreading, restructuring, polishing, or reviewing
   editorial prose when semantic preservation, natural human style, clear headings,
@@ -7,11 +7,11 @@ description: >
   and recursive editorial quality control are required.
 ---
 
-# Editorial Quality Desk
+# Ideo Edit
 
 ## Role
 
-This file is the **controller and router** for the Editorial Quality Desk.
+This file is the **controller and router** for the Ideo Edit.
 
 It does not contain the full writing rules.
 
@@ -35,8 +35,8 @@ The root `SKILL.md` and root `references/` directory are the canonical source of
 
 Do not maintain the packaged copies independently:
 
-- `skills/editorial-quality-desk/`
-- `plugins/editorial-quality-desk/skills/editorial-quality-desk/`
+- `skills/ideo-edit/`
+- `plugins/ideo-edit/skills/ideo-edit/`
 
 After changing the root skill or its references, run:
 
@@ -53,9 +53,10 @@ The repository CI verifies that both packaged copies remain identical to the can
 Explicit natural-language aliases also activate this skill:
 
 - `Call editor.`
+- `Editorial Quality Desk` (legacy name)
 - `呼叫編輯。`
 
-These aliases invoke the same Editorial Quality Desk workflow as the full skill name and may be followed by a task, target, or instruction.
+These aliases invoke the same Ideo Edit workflow as the full skill name and may be followed by a task, target, or instruction.
 
 Activate this skill when the user asks to:
 

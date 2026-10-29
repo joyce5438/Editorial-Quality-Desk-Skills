@@ -1,4 +1,4 @@
-# Editorial Quality Desk Skills
+# Ideo Edit Skills
 
 <p align="center">
   <strong>A modular AI writing and editorial quality control system.</strong>
@@ -21,7 +21,7 @@
 
 ## Version
 
-**Editorial Quality Desk Skills v1.0**
+**Ideo Edit Skills v1.0**
 
 The current version establishes the complete controller architecture and includes one primary skill module:
 
@@ -31,7 +31,7 @@ The current version establishes the complete controller architecture and include
 
 ## What this project is
 
-Editorial Quality Desk Skills is a modular Skill system for AI-assisted writing and editing.
+Ideo Edit Skills is a modular Skill system for AI-assisted writing and editing.
 
 **The skill is a cross-language editorial framework; this project is currently implemented with Chinese writing optimization as its target.**
 
@@ -115,7 +115,7 @@ Includes:
 
 ## Installation
 
-Choose the AI tool you use. Editorial Quality Desk primarily supports **Codex** and is also compatible with **Claude Code**.
+Choose the AI tool you use. Ideo Edit primarily supports **Codex** and is also compatible with **Claude Code**.
 
 > **Model recommendation**
 >
@@ -127,13 +127,13 @@ Choose the AI tool you use. Editorial Quality Desk primarily supports **Codex** 
 Paste the following instruction into a Codex conversation:
 
 ```text
-codex plugin marketplace add and install joyce5438/Editorial-Quality-Desk-Skills
+codex plugin marketplace add and install joyce5438/Ideo-Edit-Skills
 ```
 
 ### Update
 
 ```text
-codex plugin marketplace upgrade editorial-quality-desk
+codex plugin marketplace upgrade ideo-edit
 ```
 
 ## Claude Code
@@ -141,14 +141,14 @@ codex plugin marketplace upgrade editorial-quality-desk
 Add this project to the Claude Code Plugin Marketplace, then install the skill:
 
 ```text
-/plugin marketplace add joyce5438/Editorial-Quality-Desk-Skills
-/plugin install editorial-quality-desk@editorial-quality-desk
+/plugin marketplace add joyce5438/Ideo-Edit-Skills
+/plugin install ideo-edit@ideo-edit
 ```
 
 ### Update
 
 ```text
-/plugin marketplace update editorial-quality-desk
+/plugin marketplace update ideo-edit
 ```
 
 After installing or updating, start a new session.
@@ -172,7 +172,7 @@ Suitable for tasks such as:
 Standard invocation:
 
 ```text
-Use Editorial Quality Desk.
+Use Ideo Edit.
 ```
 
 Short natural-language invocation:

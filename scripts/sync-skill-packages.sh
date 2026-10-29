@@ -6,8 +6,8 @@ SOURCE_SKILL="$ROOT/SKILL.md"
 SOURCE_REFS="$ROOT/references"
 
 TARGETS=(
-  "$ROOT/skills/editorial-quality-desk"
-  "$ROOT/plugins/editorial-quality-desk/skills/editorial-quality-desk"
+  "$ROOT/skills/ideo-edit"
+  "$ROOT/plugins/ideo-edit/skills/ideo-edit"
 )
 
 for target in "${TARGETS[@]}"; do
@@ -17,4 +17,4 @@ for target in "${TARGETS[@]}"; do
   cp -R "$SOURCE_REFS" "$target/references"
 done
 
-echo "Editorial Quality Desk package copies synchronized from root source."
+echo "Ideo Edit package copies synchronized from root source."

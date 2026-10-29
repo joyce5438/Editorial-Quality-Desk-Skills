@@ -1,14 +1,14 @@
 {
-  "name": "editorial-quality-desk",
+  "name": "ideo-edit",
   "interface": {
-    "displayName": "Editorial Quality Desk"
+    "displayName": "Ideo Edit"
   },
   "plugins": [
     {
-      "name": "editorial-quality-desk",
+      "name": "ideo-edit",
       "source": {
         "source": "url",
-        "url": "https://github.com/joyce5438/Editorial-Quality-Desk-Skills.git",
+        "url": "https://github.com/joyce5438/Ideo-Edit-Skills.git",
         "ref": "main"
       },
       "policy": {
